@@ -11,6 +11,8 @@ var User = require('../model/user.model');
 //
 routes.get('/users', function(req, res) {
     res.contentType('application/json');
+
+    
     User.find({})
         .then((users) => {
             // console.log(users);

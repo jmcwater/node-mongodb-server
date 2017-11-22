@@ -3,7 +3,7 @@
 //
 var http = require('http');
 var express = require('express');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongodb = require('./config/mongo.db');
 var userroutes_v1 = require('./api/user.routes.v1');
@@ -41,8 +41,8 @@ app.use(bodyParser.json({
 // }));
 
 // configureer de app
-app.set('port', (process.env.PORT | config.env.webPort));
-app.set('env', (process.env.ENV | 'development'))
+app.set('port', (process.env.PORT || config.env.webPort));
+app.set('env', (process.env.ENV || 'development'))
 
 // wanneer je je settings wilt controleren
 // console.dir(config);
